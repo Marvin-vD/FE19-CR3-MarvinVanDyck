@@ -30,3 +30,13 @@ img{
     height: 100px;
     width: auto;
 }
+label{
+    width: 100%;
+}
+label input{
+    width: 100%;
+}
+.btn{
+    width: 30%;
+    min-width: 100px;
+}

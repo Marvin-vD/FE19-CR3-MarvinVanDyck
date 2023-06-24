@@ -1,5 +1,5 @@
 <div class="container">
-    <div class="row row-cols-xs-1 row-cols-sm-1 row-cols-sm-1 row-cols-md-1 row-cols-sm-1 row-cols-lg-2 row-cols-xl-2">
+    <div class="row row-cols-xs-1 row-cols-ms-1 row-cols-md-1 row-cols-lg-2 row-cols-xl-2">
         <div class="items">
             <h3>Cart - {{cart.length}} item(s)</h3>
             <div *ngFor="let item of cart">
@@ -22,27 +22,44 @@
             <h3>Summary</h3>
             <div class="summaryflex">
                 <p>Products</p>
-                <p>€{{total}}</p>
+                <p>€{{total[0] | number:'1.2-2'}}</p>
             </div>
             <div class="summaryflex">
                 <p>Service</p>
-                <p>€{{total}}</p>
+                <p>€{{total[1] | number:'1.2-2'}}</p>
             </div>
             <div class="summaryflex">
                 <p>Discount</p>
-                <p>€{{total}}</p>
+                <p>-€{{total[2] | number:'1.2-2'}}</p>
             </div>
             <hr>
             <div class="summaryflex">
                 <h6>Total amount <br> (including VAT)</h6>
-                <p>€{{total}}</p>
+                <p>€{{total[3] | number:'1.2-2'}}</p>
             </div>
         </div>
     </div>
+    <br>
+    <h2>Order Form</h2>
+    <p>please fill up the info for the delivery</p>
+    <hr>
+    <form [formGroup]="info" (ngSubmit)="onPurchase()">
+        <label>
+            Name
+            <br>
+            <input type="text" formControlName="name">
+        </label>
+        <br>
+        <label>
+            Address
+            <br>
+            <input type="text" formControlName="address">
+        </label>
+        <br>
+        <br>
+        <input type="purchase" class="btn btn-primary" value="purchase">
+    </form>
 </div>
-<br>
-<h2>Order Form</h2>
-<p>please fill up the info for the delivery</p>
-<hr>
+
 
 

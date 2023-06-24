@@ -9,9 +9,9 @@
                       <h5 class="card-title">{{product.name}}</h5>
                       <p class="card-text">{{product.description}}</p>
                       <hr>
-                      <p class="card-text">${{product.price}}</p>
+                      <p class="card-text">€{{product.price | number:'1.2-2'}}</p>
                       <hr>
-                      <p *ngIf="product.availability; else elseback">
+                      <p class="btns" *ngIf="product.availability; else elseback">
                         <a routerLink="/product/{{i}}" class="btn btn-primary ms-2">Details</a>
                         <a (click)="addToCart(product)" class="btn btn-success ms-2">Order</a>
                       </p>
