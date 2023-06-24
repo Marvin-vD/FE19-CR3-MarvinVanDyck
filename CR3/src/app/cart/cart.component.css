@@ -1,0 +1,32 @@
+.row{
+    justify-content: space-between;
+    gap: 10px;
+}
+.items{
+    border: solid 1px gray;
+    border-radius: 2px;
+    padding: 0px;
+    width: 600px;
+}
+.summary{
+    border: solid 1px gray;
+    border-radius: 2px;
+    width: 300px;
+    padding: 0px;
+}
+.summaryflex{
+    display: flex;
+    justify-content: space-between;
+}
+h3{
+    background-color: rgb(232, 231, 231);
+    border-bottom: solid 1px gray;
+}
+.item{
+    display: flex;
+    justify-content: space-between;
+}
+img{
+    height: 100px;
+    width: auto;
+}

@@ -1,0 +1,27 @@
+<h2>Our Specialtis</h2>
+<div class="container">
+    <div class="row row-cols-xl-4 row-cols-lg-3 row-cols-md-2 row-cols-sm-1 row-cols-xs-1">
+        <div *ngFor="let product of products; index as i">
+            <div>
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                      <img src={{product.image}} class="card-img-top">
+                      <h5 class="card-title">{{product.name}}</h5>
+                      <p class="card-text">{{product.description}}</p>
+                      <hr>
+                      <p class="card-text">${{product.price}}</p>
+                      <hr>
+                      <p *ngIf="product.availability; else elseback">
+                        <a routerLink="/product/{{i}}" class="btn btn-primary ms-2">Details</a>
+                        <a (click)="addToCart(product)" class="btn btn-success ms-2">Order</a>
+                      </p>
+                      
+                      <ng-template #elseback>
+                          <p class="text-danger">This product is not available</p>
+                      </ng-template>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+</div>

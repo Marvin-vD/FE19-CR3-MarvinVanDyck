@@ -1,0 +1,33 @@
+footer {
+    margin-top: 30px;
+    padding-top: 10px;
+    background-color: rgb(50, 50, 50);
+    color: white;
+    text-align: center;
+  }
+  footer .IconNav {
+    margin-bottom: 10px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  footer .IconNav a {
+    width: 25px;
+    height: 25px;
+    border: solid 1px;
+    border-radius: 3px;
+    border-color: white;
+  }
+  footer .IconNav a img {
+    height: 20px;
+    width: 20px;
+  }
+  footer .footerNav #sub {
+    width: 82px;
+    color: white;
+    background-color: rgb(50, 50, 50);
+    border: solid 1px;
+    border-radius: 3px;
+    border-color: white;
+}

@@ -1,0 +1,27 @@
+.about{
+    margin: 5vw;
+    width: 90vw;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+img{
+    height: auto;
+    width: 20%;
+}
+.about p{
+    text-align: start;
+}
+.why{
+    background-color: beige;
+    text-align: center;
+}
+h1{
+    text-align: center;
+    padding-top: 40px;
+}
+.reasons{
+    display: flex;
+    gap: 50px;
+    padding: 25px;
+}
