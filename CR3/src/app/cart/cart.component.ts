@@ -19,10 +19,8 @@ export class CartComponent implements OnInit{
     address: new FormControl('',Validators.required),
   });
   onPurchase(){
-    // to take the values from the form you can select the property that have the formGroup and then just add .value´
       if(this.info.valid){
-        var a = this.info.value;
-        console.log(a);
+        var v = this.info.value;
      }
   }
 
